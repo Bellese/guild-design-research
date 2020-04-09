@@ -1,65 +1,48 @@
-## 18F Guides Template
+## 18F Content Guide
 
-This is a skeleton repo containing the
-[CFPB/DOCter](https://github.com/CFPB/DOCter)-based
-[Jekyll](http://jekyllrb.com/) template for
-[18F Guides](http://18f.github.io/guides/).
+This is the repository for the [18F Content Guide](https://content-guide.18f.gov/). This guide was developed for 18F employees, but we hope it's a useful reference for everyone.
 
-### Generating the site/hosting locally
+For a detailed introduction, see [how to use this guide](https://content-guide.18f.gov/how-to-use-this-guide/).
 
-You will need [Ruby](https://www.ruby-lang.org) ( > version 2.1.5 ). You may
-consider using a Ruby version manager such as
-[rbenv](https://github.com/sstephenson/rbenv) or [rvm](https://rvm.io/) to
-help ensure that Ruby version upgrades don't mean all your
-[gems](https://rubygems.org/) will need to be rebuilt.
+## History
 
-On OS X, you can use [Homebrew](http://brew.sh/) to install Ruby in
-`/usr/local/bin`, which may require you to update your `$PATH` environment
-variable:
+18F's Content Guild ([#g-content](https://18f.slack.com/archives/g-content)) maintains this guide.
 
-```shell
-$ brew update
-$ brew install ruby
-```
+We started by adapting [GOV.UK’s work](https://www.gov.uk/guidance/content-design), and we’d like to thank their team for championing plain language and information accessibility. We've since expanded the guide to cover more topics, reorganized things, and moved the site from 18F Pages to [Federalist](https://github.com/18F/federalist/). This guide is a work in progress, and we'll continue refining it over time.
 
-To create a new guide and serve it locally, where `MY-NEW-GUIDE` is the name
-of your new repository:
+### Contributors
 
-```shell
-$ git clone git@github.com:18F/guides-template.git MY-NEW-GUIDE
-$ cd MY-NEW-GUIDE
-$ ./go init
-$ ./go serve
-```
+* [Jamie Albrecht](https://github.com/jamiealbrecht)
+* [Emileigh Barnes](https://github.com/emileighoutlaw)
+* [Nicole Fenton](https://github.com/nicoleslaw)
+* [Andre Francisco](https://github.com/awfrancisco)
+* [Britta Gustafson](https://github.com/brittag)
+* [Jeannine Hunter](https://github.com/jeanninehunter)
+* [James Hupp](https://github.com/jameshupp)
+* [Andrew Maier](https://github.com/andrewmaier)
+* [Corey Mahoney](https://github.com/coreycaitlin)
+* [Kate Saul](https://github.com/kategarklavs)
+* [Anna Heller Sebok](https://github.com/annahsebok)
+* [Will Slack](https://github.com/wslack)
+* [Tadhg O'Higgins](https://github.com/tadhg-ohiggins)
+* [Atul Varma](https://github.com/toolness)
 
-This will check that your Ruby version is supported, install the [Bundler
-gem](http://bundler.io/) if it is not yet installed, install all the gems
-needed by the template, and launch a running instance on
-`http://localhost:4000/guides-template/`. (Make sure to include the trailing slash! The built-in
-Jekyll webserver doesn't redirect to it.) That page contains further
-instructions on how to adapt the template to a new guide repository.
+### Running the site
 
-After going through these steps, run `./go` to see a list of available
-commands. The `serve` command is the most common for routine development.
+The 18F Content Guide runs on [Jekyll](http://jekyllrb.com/).
 
-You'll need to create a new Github repository for your new guide. To do this, go to github.com/18f and click the "New Repository" button. Enter the title and description for your new guide and then click "Create Repository".
+To run it locally:
 
-After the repository is created, you'll see the repo URL at the top. Copy this url by hitting the handy "Copy to Clipboard" button next to the text box. 
+1. Make sure that you have Ruby 2.3. At present, this project is incompatible with Ruby 2.4.
+2. Clone the repository.
+3. Install [Jekyll](http://jekyllrb.com/) and the necessary dependencies: `bundle install`
+4. Run the web server with `./go serve` (or `jekyll serve` if you have Jekyll installed globally)
+5. Visit the local site at [http://localhost:4000](http://localhost:4000)
 
-Go back to the directory where you cloned the guides-template repository. We're going to change this repo to point to the one you just created (which is empty) and push the template to it.
-```
-git remote set-url origin https://github.com/18F/MY-NEW-GUIDE.git
-git push origin 18f-pages
-```
-
-Now you can edit the template freely, and push up changes as you need. 
+Note that you will also need [Node.js](https://nodejs.org/en) in order for the site's built-in search functionality to work.
 
 ### Public domain
 
-This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
+As a work of the United States government, this project is in the public domain within the United States.
 
-> This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
->
-> All contributions to this project will be released under the CC0
->dedication. By submitting a pull request, you are agreeing to comply
->with this waiver of copyright interest.
+Additionally, we waive copyright and related rights in the work worldwide through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).

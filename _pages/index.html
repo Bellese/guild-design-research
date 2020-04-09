@@ -1,0 +1,42 @@
+---
+permalink: /
+title: Introduction
+layout: none   
+excerpt: none
+---
+
+<html lang="en">
+  {% include head.html %}
+  <body class="layout-table-of-contents">
+    <a class="a-skip-to-main" href="#main">Skip to main content</a>
+    <header role="banner" class="site-header">
+      <div class="wrapper">
+        <!-- This h1 element has this id because, unless we set it here,
+        kramdown will populate it with a value based on the content of the
+        element, which results in "18f-content-guide", which is an invalid
+        value due to its starting with a numeral. -->
+        <h1 id="title-18f-content-guide">{{site.title}}</h1>
+        <p>{{site.description}}</p>
+      </div>
+    </header>
+    <main id="main" role="main">
+      <div class="wrapper">
+        <h1>Values</h1>
+        <ul>
+          <li>Accessibility</li>
+          <li>Clarity</li>
+          <li>Consensus</li>
+          <li>Critical thinking</li>
+          <li>Helping people</li>
+          <li>Honesty</li>
+          <li>Learning</li>
+          <li>Mindfulness</li>
+          <li>Nurturing the field of research</li>
+          <li>Respect</li>
+          <li>Storytelling</li>
+        </ul>
+      </div>
+    </main>
+    {% include site-footer.html %}
+  </body>
+</html>
