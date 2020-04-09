@@ -17,46 +17,24 @@ excerpt: none
         value due to its starting with a numeral. -->
         <h1 id="title-18f-content-guide">{{site.title}}</h1>
         <p>{{site.description}}</p>
-        {% jekyll_pages_api_search_interface %}
       </div>
     </header>
     <main id="main" role="main">
       <div class="wrapper">
-        <ol>
-          {% for nav in site.navigation %}
-            {% if nav.url == nil %}{% continue %}{% endif %}
-            <li class="{{ nav.url | remove:"/" }}">
-              {% if nav.children == nil %}
-                <a href="#">Test</a>
-              {% endif %}
-
-              {% unless nav.children == nil %}
-                <h1 id="{{ nav.url | remove:"/" }}">{{ nav.text }}</h1>
-                {% if nav.blurb %}<p>{{ nav.blurb }}</p>{% endif %}
-                <ol class="toc-nav-children">
-                  {% for child in nav.children %}
-                    {% if child.children != nil %}
-                    <li id="{{ child.text | slugify }}" class="toc-nav-child-with-children {{ child.text | slugify }}">
-                      {{ child.text }}
-                      <ol class="toc-nav-grandchildren">
-                        {% for grandchild in child.children %}
-                          <li class="{{ grandchild.text | slugify }}">
-                            <a href="{{ site.baseurl }}/{{ grandchild.url }}">{{ grandchild.text }}</a>
-                          </li>
-                        {% endfor %}
-                      </ol>
-                    {% else %}
-                    <li class="{{ child.text | slugify }}">
-                      <a href="{{ site.baseurl }}/{{ child.url }}">{{ child.text }}</a>
-                    {% endif %}
-                    </li>
-                  {% endfor %}
-                </ol>
-              {% endunless %}
-
-            </li>
-          {% endfor %}
-        </ol>
+        <h1>Values</h1>
+        <ul>
+          <li>Accessibility</li>
+          <li>Clarity</li>
+          <li>Consensus</li>
+          <li>Critical thinking</li>
+          <li>Helping people</li>
+          <li>Honesty</li>
+          <li>Learning</li>
+          <li>Mindfulness</li>
+          <li>Nurturing the field of research</li>
+          <li>Respect</li>
+          <li>Storytelling</li>
+        </ul>
       </div>
     </main>
     {% include site-footer.html %}
